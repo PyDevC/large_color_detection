@@ -2,9 +2,15 @@ import cv2
 import numpy as np
 
 
-def hsvframe(frame):
+def hsvframe(frame, color):
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     kernal = np.ones((5, 5), "uint8")
+    if color == 'r':
+        red_color(frame, kernal)
+    elif color == 'g':
+        green_color(frame, kernal)
+    elif color == 'b':
+        blue_color(frame, kernal)
 
 
 def red_color(hsvFrame, kernal):

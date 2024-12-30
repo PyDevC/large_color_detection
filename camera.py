@@ -1,5 +1,7 @@
 import cv2
 
+# camera features will be updated making it compatible for other devices
+
 
 def camera():
     cam = cv2.VideoCapture(0)
