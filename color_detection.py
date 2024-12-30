@@ -82,3 +82,9 @@ while True:
             cv2.putText(imageFrame, "Blue Colour", (x, y),
                         cv2.FONT_HERSHEY_SIMPLEX,
                         1.0, (255, 0, 0))
+
+    cv2.imshow("Color Detection", frame)
+    if cv2.waitKey(10) & 0xFF == ord('q'):
+        cam.release()
+        cv2.destroyAllWindows()
+        break
